@@ -4,19 +4,20 @@ modelDir=$(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/
 
 contexts=(
   #"0"
-  "-1,0,1"
-  "-2,-1,0,1,2"
-  "-3-2,-1,0,1,2,3"
-#  "-4,-3-2,-1,0,1,2,3,4"
-  "-5,-4,-3-2,-1,0,1,2,3,4,5"
-  "-6,-5,-4,-3-2,-1,0,1,2,3,4,5,6"
-  "-7,-6,-5,-4,-3-2,-1,0,1,2,3,4,5,6,7"
-  "-8,-7,-6,-5,-4,-3-2,-1,0,1,2,3,4,5,6,7,8"
-  "-9,-8,-7,-6,-5,-4,-3-2,-1,0,1,2,3,4,5,6,7,8,9"
-  "-10,-9,-8,-7,-6,-5,-4,-3-2,-1,0,1,2,3,4,5,6,7,8,9,10"
+  #"-1,0,1"
+  #"-2,-1,0,1,2"
+  #"-3-2,-1,0,1,2,3"
+  "-4,-3,-2,-1,0,1,2,3,4"
+  "-5,-4,-3,-2,-1,0,1,2,3,4,5"
+  "-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6"
+  "-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7"
+  "-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8"
+  "-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9"
+  "-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10"
 )
 
 for context in $contexts; do
+  print "Training context=$context"
   # remove trained dnn dir if present
   if [[ -d ./MH0/dnntrain ]]; then
     rm -rf ./MH0/dnntrain
@@ -25,6 +26,11 @@ for context in $contexts; do
   split=("${(@s/,/)context}") # @ modifier splits string into array
   contextLength=${#split}
   inputLayerSize=$(($contextLength*39))
+
+  print $context
+  print $split
+  print $contextLength
+  print $inputLayerSize
 
   # set the context length and input layer size
   sed -i "s/set CONTEXTSHIFT=[^ ]*/set CONTEXTSHIFT=$context/" ./HTE.dnntrain
