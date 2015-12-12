@@ -1,16 +1,22 @@
 #!/usr/bin/zsh
 
 features=(
-"FBK"
-"MFC"
+"MFC_E_Z"
+"MFC_E_D_Z"
+#"MFC" # E_D_A_Z
+#"FBK" # D_A_Z
 )
 alignDirs=(
+$(dirname `pwd`)/"MFC_E_Z_FlatStart"
+$(dirname `pwd`)/"MFC_E_D_Z_FlatStart"
+$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
 $(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
-$(dirname `pwd`)/"MFC_E_D_A_Z"
 )
 envDirs=(
-"../../convert/fbk25d/env/environment_D_A_Z"
+"../../convert/mfc13d/env/environment_E_Z"
+"../../convert/mfc13d/env/environment_E_D_Z"
 "../../convert/mfc13d/env/environment_E_D_A_Z"
+"../../convert/fbk25d/env/environment_D_A_Z"
 )
 
 integer i
@@ -23,7 +29,7 @@ for i in {1..$#features}; do
   "0"
   "-1,0,1"
   "-2,-1,0,1,2"
-  "-3-2,-1,0,1,2,3"
+  "-3,-2,-1,0,1,2,3"
   "-4,-3,-2,-1,0,1,2,3,4"
   "-5,-4,-3,-2,-1,0,1,2,3,4,5"
   "-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6"

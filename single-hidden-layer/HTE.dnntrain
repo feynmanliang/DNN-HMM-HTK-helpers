@@ -11,8 +11,8 @@
 # DNN definition variables
 #set FEATURETYPE=MFCC_E_D_A_Z
 #set FEATUREDIM=39
-set CONTEXTSHIFT=-2,-1,0,1,2                  # input feature context shift
-set DNNSTRUCTURE=195X500X3000		# BN DNN structure (351 = 39 * 9)
+set CONTEXTSHIFT=-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10                  # input feature context shift
+set DNNSTRUCTURE=819X500X3000		# BN DNN structure (351 = 39 * 9)
 set HIDDENACTIVATION=SIGMOID				# Sigmoid hidden activation function
 set OUTPUTACTIVATION=SOFTMAX				# Softmax output activation function
 set LOGOBSVPRIOR=-135.0					# log p(o_t) = -135.0 to make log likelihood < 0 for CN
