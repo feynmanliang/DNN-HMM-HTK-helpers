@@ -1,21 +1,21 @@
 #!/usr/bin/zsh
 
 features=(
+"MFC" # E_D_A_Z
 "MFC_E_Z"
 "MFC_E_D_Z"
-"MFC" # E_D_A_Z
 "FBK" # D_A_Z
 )
 alignDirs=(
+$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
 $(dirname `pwd`)/"MFC_E_Z_FlatStart"
 $(dirname `pwd`)/"MFC_E_D_Z_FlatStart"
-$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
 $(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
 )
 envDirs=(
+"../../convert/mfc13d/env/environment_E_D_A_Z"
 "../../convert/mfc13d/env/environment_E_Z"
 "../../convert/mfc13d/env/environment_E_D_Z"
-"../../convert/mfc13d/env/environment_E_D_A_Z"
 "../../convert/fbk25d/env/environment_D_A_Z"
 )
 
@@ -63,16 +63,23 @@ for i in {1..$#features}; do
       $alignDir/mono/hmms.mlist MH0/dnntrain
 
     #copy fine-tuning log for train/cv frame classification performance
-    cp ./MH0/dnntrain/dnn3.finetune/LOG \
-      ./MH0/dnn3.finetune-features=${feature}-context=${context}
+    #cp ./MH0/dnntrain/dnn3.finetune/LOG \
+    #  ./MH0/dnn3.finetune-features=${feature}-context=${context}
 
     #test the DNN
     for insword in -32.0 -16.0 -8.0 -4.0 -2.0 0.0 2.0 4.0; do
-      print "Decoding INSWORD=${insword}"
+      print "Decoding INSWORD=${insword} on training subset"
       ../../tools/steps/step-decode \
         -INSWORD $insword \
+        -SUBTRAIN \
         `pwd`/MH0/dnntrain dnn3.finetune \
-        MH0/decode-dnn3.finetune-features=${feature}-context=${context}-insword=${insword}
+        MH0/decode-dnn3.finetune-trainSub-features=${feature}-context=${context}-insword=${insword}
+
+      #print "Decoding INSWORD=${insword} on test set"
+      #../../tools/steps/step-decode \
+      #  -INSWORD $insword \
+      #  `pwd`/MH0/dnntrain dnn3.finetune \
+      #  MH0/decode-dnn3.finetune-features=${feature}-context=${context}-insword=${insword}
     done
   done
 done
