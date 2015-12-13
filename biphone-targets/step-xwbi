@@ -4,7 +4,7 @@
 #set verbose
 # last update: 31/10/2015
 
-set BIPHONE_PATH=/home/fl350/mlsalt2-practical1/exp/biphones
+set BIPHONE_PATH=`pwd`
 
 ############################################################
 # Step1: tied cross-word biphone state GMM-HMMs training
