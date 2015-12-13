@@ -37,7 +37,14 @@ for numHiddenLayers in {2..8}; do
 
       # test the DNN
       for insword in -8.0 -4.0 -2.0 0.0; do
-        print "Decoding INSWORD=${insword}"
+        print "Decoding INSWORD=${insword} on training subset"
+        ../../tools/steps/step-decode \
+          -INSWORD $insword \
+          -SUBTRAIN \
+          `pwd`/MH0/dnntrain ${finetune} \
+          MH0/decode-${finetune}-trainSub-numHiddenLayers=${numHiddenLayers}-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword}
+
+        print "Decoding INSWORD=${insword} on test set"
         ../../tools/steps/step-decode \
           -INSWORD $insword \
           `pwd`/MH0/dnntrain ${finetune} \
