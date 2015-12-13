@@ -11,4 +11,8 @@ modelDir=$(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/
   $modelDir/mono/hmms.mlist MH0/dnntrain
 
 # test
-../../tools/steps/step-decode `pwd`/MH0/dnntrain dnn7.finetune MH0/decode-dnn7.finetune
+../../tools/steps/step-decode \
+  -SUBTRAIN \
+  `pwd`/MH0/dnntrain dnn7.finetune MH0/decode-dnn7.finetune-trainSub
+../../tools/steps/step-decode \
+  `pwd`/MH0/dnntrain dnn7.finetune MH0/decode-dnn7.finetune
