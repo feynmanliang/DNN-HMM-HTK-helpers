@@ -3,8 +3,8 @@
 features=(
 "MFC_E_Z"
 "MFC_E_D_Z"
-#"MFC" # E_D_A_Z
-#"FBK" # D_A_Z
+"MFC" # E_D_A_Z
+"FBK" # D_A_Z
 )
 alignDirs=(
 $(dirname `pwd`)/"MFC_E_Z_FlatStart"
