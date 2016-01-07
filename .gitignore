@@ -5,3 +5,4 @@ FBK_D_A_Z_FlatStart/
 CMDs/
 MH0/
 *.log
+**/nohup.out

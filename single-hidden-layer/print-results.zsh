@@ -43,11 +43,18 @@ for feature in $features; do
   for context in $contexts; do
     for insword in $inswords; do
       decodeAcc=$(cat \
+        MH0/decode-dnn3.finetune-trainSub-features=${feature}-context=${context}-insword=${insword}/test/LOG \
+        | tail -n5 \
+        | head -n1 \
+        | awk -F '[ =]' '{print $5}')
+      print $feature\;$context\;$insword\;Train.Subset\;$decodeAcc
+
+      decodeAcc=$(cat \
         MH0/decode-dnn3.finetune-features=${feature}-context=${context}-insword=${insword}/test/LOG \
         | tail -n5 \
         | head -n1 \
         | awk -F '[ =]' '{print $5}')
-      print $feature\;$context\;$insword\;$decodeAcc
+      print $feature\;$context\;$insword\;Test.Set\;$decodeAcc
     done
   done
 done
