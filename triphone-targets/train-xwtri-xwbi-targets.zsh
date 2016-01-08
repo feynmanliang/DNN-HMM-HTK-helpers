@@ -20,7 +20,7 @@ for ptwd in 0.1 0.01 0.001 0.0001 0.00001 0.000001; do
 
     #train the DNN
     ../../tools/steps/step-dnntrain \
-      -DNNTRAINHTE `pwd`/HTE.dnntrain -USEGPUID 0\
+      -DNNTRAINHTE `pwd`/HTE.dnntrain -USEGPUID 0 \
       $envDir \
       $alignDir/align-xwtri-hmm84/align/timit_train.mlf $alignDir/xwtri/hmm84/MMF \
       $alignDir/xwtri/hmms.mlist MH0/dnntrain

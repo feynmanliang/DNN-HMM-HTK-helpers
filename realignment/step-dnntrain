@@ -1,0 +1,149 @@
+#!/bin/tcsh
+#$ -S /bin/tcsh
+
+#set verbose
+# last update: 12/10/2015
+
+############################################################
+# Step3: mono-/xwtri- state target DNN-HMMs training
+############################################################
+
+set ALLARGS=($*)
+set CHANGED
+if ($#argv > 1) then
+while ( $?CHANGED )
+    unset CHANGED
+    if ( "$argv[1]" == "-DNNTRAINHTE" ) then
+        set CHANGED
+        shift argv
+        set DNNTRAINHTE = $argv[1]
+        shift argv
+    endif
+    if ( "$argv[1]" == "-USEGPUID" ) then
+        set CHANGED
+        shift argv
+        set USEGPUID = $argv[1]
+        shift argv
+    endif
+    if ( "$argv[1]" == "-SINGLESIL" ) then
+        set CHANGED
+        shift argv
+        set SINGLESIL
+    endif
+    if ( "$argv[1]" == "-TOOLSDIR" )  then
+        set CHANGED
+        shift argv
+        set TOOLSDIR = $argv[1]
+        shift argv
+    endif
+end
+endif
+
+# Check Number of Args 
+if ( $#argv != 5) then
+    echo "Usage: $0 [-DNNTRAINHTE path] [-USEGPUID n] [-SINGLESIL] [-TOOLSDIR path] environment abspath_mlfpath abspath_hmmpath abspath_lstpath systemdir"
+    echo " e.g.: $0 environment.fbk25d_Z /home/timit/SF0/align/train.mlf /home/timit/SF0/ml/hmm7/MMF /home/timit/SF0/ml/hmms.mlist HF0/dnntrain"
+    echo " -DNNTRAINHTE path: specify the DNN training HTE file"
+    echo " -USEGPUID n: specify the GPU id (otherwise use CPU training)"
+    echo " -SINGLESIL: training single sil target DNN" 
+    echo " -TOOLSDIR path: use specified dir rather than default TIMITTOOLS"
+    exit 1
+endif
+
+set SYSENV = $argv[1]
+set MLFPATH = $argv[2]
+set HMMPATH = $argv[3]
+set LSTPATH = $argv[4]
+set TGTDIR = $argv[5]
+
+if (! -f $SYSENV) then
+    echo "The environment file $SYSENV is missing"
+    exit 1
+endif
+source $SYSENV
+source /opt/intel/composerxe/bin/compilervars.csh intel64
+
+if (! -f $MLFPATH) then
+    echo "Input MLF $MLFPATH do not exist"
+    exit 1
+endif
+if (! -f $HMMPATH) then
+    echo "Source HMMs $HMMPATH do not exist"
+    exit 1
+endif
+if (! -f $LSTPATH) then
+    echo "Source HMM list $LSTPATH does not exist"
+    exit 1
+endif
+
+if ( -d $TGTDIR) then
+    echo "Target directory $TGTDIR exists - delete before rerun"
+    exit 1
+endif
+mkdir -p $TGTDIR
+
+if (! -d CMDs/$TGTDIR) mkdir -p CMDs/$TGTDIR
+set MEMO = records
+echo "------------------------------------" >> CMDs/$TGTDIR/${MEMO}.cmds
+echo "$0 $ALLARGS" >> CMDs/${TGTDIR}/${MEMO}.cmds
+echo "------------------------------------" >> CMDs/$TGTDIR/${MEMO}.cmds
+
+
+# change to the target working dir and do the basic steups
+cp $SYSENV $TGTDIR/environment
+cd $TGTDIR
+#     setup the tools dir
+if ($?TOOLSDIR) then
+    ln -s $TOOLSDIR ./tools
+else
+    ln -s $TIMITTOOLS ./tools
+endif
+if ( -d tools/htklib/cuda) then
+    setenv LD_LIBRARY_PATH tools/htklib:$LD_LIBRARY_PATH
+endif
+#     setup the lib and cfgs
+ln -s ${TIMITLIB} ./
+cp lib/cfgs/basic${FEADIFF}.cfg ./basic.cfg
+
+
+# link the initial model and MLF
+cp $MLFPATH ./train.mlf
+cp $LSTPATH ./hmms.mlist
+mkdir -p proto/work
+if ($?SINGLESIL) then
+    tools/htkbin/HHEd -A -D -V -T 1 -H $HMMPATH -w proto/work/MMF lib/edfiles/tie_silstates.hed hmms.mlist > proto/work/LOG
+    cp $LSTPATH ./hmms.mlist
+else
+    cp $HMMPATH proto/work/MMF
+endif
+
+
+# generate the HTE file
+if ($?DNNTRAINHTE) then
+    cp $DNNTRAINHTE ./HTE.dnntrain
+else
+    cp lib/htefiles/HTE.dnntrain ./HTE.dnntrain
+endif
+#     set the FEATURETYPE and FEATUREDIM
+set FEATURETYPE = `cat ./basic.cfg | grep "TARGETKIND = " | awk '{print $3}'`
+#set FEATUREDIM = `cat ./basic.cfg | grep "FEATUREDIM = " | awk '{print $4}'`
+echo "set FEATURETYPE = ${FEATURETYPE}" >> ./HTE.dnntrain
+echo "set FEATUREDIM = ${FEADIM}" >> ./HTE.dnntrain
+#     set the GPU computing option if needed
+if ($?USEGPUID) then
+    echo "set GPUID = $USEGPUID" >> ./HTE.dnntrain
+    echo "set HNTRAINSGD = tools/htkbin/HNTrainSGD.GPU" >> ./HTE.dnntrain
+else 
+    echo "set HNTRAINSGD = tools/htkbin/HNTrainSGD" >> ./HTE.dnntrain
+endif
+echo "set HHED = tools/htkbin/HHEd" >> ./HTE.dnntrain
+
+# 1.1 do DNN pre-training
+echo "Step 1: Do DNN pre-training"
+tools/scripts/pretrain HTE.dnntrain
+
+# 1.2 do DNN fine-tuning
+echo "Step 2: Do DNN fine-tuning"
+tools/scripts/finetune HTE.dnntrain
+
+
