@@ -1,7 +1,5 @@
 #!/usr/bin/zsh
 
-inswords=(-32.0 -16.0 -8.0 -4.0 -2.0 0.0 2.0 4.0)
-
 # final epoch train/cv accuracy
 for numHiddenLayers in {2..8}; do
   for ptwd in 0.1 0.01 0.001 0.0001 0.00001 0.000001; do
