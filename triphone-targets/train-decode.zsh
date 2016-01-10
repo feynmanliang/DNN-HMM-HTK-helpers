@@ -16,8 +16,10 @@ for ptwd in 1 0.1; do
 
     print "Training xwtri and xwbi-rc, ptwd=$ptwd, ftwd=$ftwd"
 
-    xwtriDir=dnntrain-xwtri-ptwd=${ptwd}-ftwd=${ftwd}
-    xwbiDir=dnntrain-xwbi-rc-ptwd=${ptwd}-ftwd=${ftwd}
+    #xwtriDir=dnntrain-xwtri-ptwd=${ptwd}-ftwd=${ftwd}
+    xwtriDir=dnntrain-xwtri
+    #xwbiDir=dnntrain-xwbi-rc-ptwd=${ptwd}-ftwd=${ftwd}
+    xwbiDir=dnntrain-xwbi
 
     #remove trained dnn dir if present
     if [[ -d ./MH0/$xwtriDir ]]; then
@@ -27,7 +29,7 @@ for ptwd in 1 0.1; do
       rm -rf ./MH0/$xwbiDir
     fi
 
-    #train the DNN
+    # fork: train the DNN
     ../../tools/steps/step-dnntrain \
       -DNNTRAINHTE `pwd`/$hteFile -USEGPUID 0 \
       $envDir \
@@ -39,18 +41,13 @@ for ptwd in 1 0.1; do
       $alignDir/align-xwbi-rc-hmm84/align/timit_train.mlf $alignDir/xwbi-rc/hmm84/MMF \
       $alignDir/xwbi-rc/hmms.mlist MH0/$xwbiDir &
 
-    sleep 5
-  done
-done
-while (( ${#jobstates} )); do
-  print "Waiting for ${#jobstates} jobs to finish"
-  sleep ${sleepsecs}
-done
-print "Done all training jobs"
+    # join
+    while (( ${#jobstates} )); do
+      print "Waiting for ${#jobstates} jobs to finish"
+      sleep ${sleepsecs}
+    done
+    print "Done all training jobs"
 
-#copy fine-tuning log for train/cv frame classification performance
-for ptwd in 1 0.1; do
-  for ftwd in 0.1 0.01 0.001 0.0001 0.00001; do
     tmp=(./MH0/$xwtriDir/*.finetune/)
     finetune=${${tmp%/*}##*/}
     cp ./MH0/$xwtriDir/$finetune/LOG \
@@ -60,5 +57,37 @@ for ptwd in 1 0.1; do
     finetune=${${tmp%/*}##*/}
     cp ./MH0/$xwbiDir/$finetune/LOG \
       ./MH0/${finetune}-xwbi-rc-ptwd=${ptwd}-ftwd=${ftwd}
+
+    # fork: test the DNN
+    for insword in -8.0 -4.0 -2.0 0.0; do
+      print "Decoding INSWORD=${insword} on training subset"
+      ../../tools/steps/step-decode \
+        -INSWORD $insword \
+        -SUBTRAIN \
+        `pwd`/MH0/$xwtriDir ${finetune} \
+        MH0/decode-${finetune}-trainSub-xwtri-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword} &
+      ../../tools/steps/step-decode \
+        -INSWORD $insword \
+        -SUBTRAIN \
+        `pwd`/MH0/$xwbiDir ${finetune} \
+        MH0/decode-${finetune}-trainSub-xwbi-rc-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword} &
+
+      print "Decoding INSWORD=${insword} on test set"
+      ../../tools/steps/step-decode \
+        -INSWORD $insword \
+        `pwd`/MH0/$xwtriDir ${finetune} \
+        MH0/decode-${finetune}-xwtri-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword} &
+      ../../tools/steps/step-decode \
+        -INSWORD $insword \
+        `pwd`/MH0/$xwbiDir ${finetune} \
+        MH0/decode-${finetune}-xwbi-rc-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword} &
+    done
   done
+
+  # join
+  while (( ${#jobstates} )); do
+    print "Waiting for ${#jobstates} jobs to finish"
+    sleep ${sleepsecs}
+  done
+  print "Done all decoding jobs"
 done

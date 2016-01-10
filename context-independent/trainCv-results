@@ -1,0 +1,258 @@
+tools/htkbin/HNTrainSGD -A -D -V -T 1 -C basic.cfg -C finetune.cfg -H dnn7/MMF -M dnn7.finetune -l LABEL -S lib/flists/dnn.train.scp -N lib/flists/dnn.cv.scp -I train.mlf hmms.mlist 
+
+HTK Configuration Parameters[27]
+  Module/Tool     Parameter                  Value
+# HNTRAINSGD      BIASUPDATECLIP          0.320000
+# HNTRAINSGD      WEIGHTUPDATECLIP          0.320000
+# HNTRAINSGD      ACTIVATIONUPDATECLIP          0.320000
+# HNTRAINSGD      WEIGHTDECAY             0.001000
+# HNTRAINSGD      MOMENTUM                0.500000
+# HNTRAINSGD      MAXEPOCHNUM                   12
+# HNTRAINSGD      MINEPOCHNUM                    8
+# HNTRAINSGD      LEARNRATE               0.002000
+# HNTRAINSGD      STOPDIFF                0.001000
+# HNTRAINSGD      RAMPSTART               0.001000
+# HNTRAINSGD      NEWBOBCRT                    ACC
+# HNTRAINSGD      LRSCHEDULER               NEWBOB
+# HNCACHE         DATACACHESIZE          200000000
+# HANNET          MINIBATCHSIZE                800
+# HNTRAINSGD      UPDATETARGETPEN              TRUE
+# HNTRAINSGD      CRITERION                   XENT
+# HNTRAINSGD      UPDATEMODE            BATCHLEVEL
+# HNTRAINSGD      TRACE                          1
+# HNCACHE         SHUFFLEKIND             QUICKNET
+# HNCACHE         DATAACCESSKIND         FRAMERAND
+# HNCACHE         TRACE                          1
+# HANNET          TRACE                          1
+# HPARM           VARSCALEFN      lib/info/ident_cvn_E_D_A_Z
+# HPARM           VARSCALEPATHMASK             *.%%%
+# HPARM           VARSCALEMASK               *.%%%
+# HPARM           VARSCALEDIR     lib/cvn/cvn_E_D_A_Z
+#                 TARGETKIND          MFCC_E_D_A_Z
+
+
+HTK Version Information
+Module     Version    Who    Date      : CVS Info
+HNTrainSGD 3.5.0      CUED   12/10/15  : $Id: HNTrainSGD.c,v 1.0 2015/10/12 12:07:24 cz277 Exp $
+HShell     3.5.0      CUED   12/10/15  : $Id: HShell.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HMem       3.5.0      CUED   12/10/15  : $Id: HMem.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HMath      3.5.0      CUED   12/10/15  : $Id: HMath.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HSigP      3.5.0      CUED   12/10/15  : $Id: HSigP.c,v 1.1.1.1 2006/10/11 09:54:58 jal58 Exp $
+HWave      3.5.0      CUED   12/10/15  : $Id: HWave.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HLabel     3.5.0      CUED   12/10/15  : $Id: HLabel.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HAudio     3.5.0      CUED   12/10/15  : $Id: HAudio.c,v 1.1.1.1 2006/10/11 09:54:57 jal58 Exp $
+HANNet     3.5.0      CUED   12/10/15  : $Id: HANNet.c,v 1.0 2015/10/12 12:07:24 cz277 Exp $
+HModel     3.5.0      CUED   12/10/15  : $Id: HModel.c,v 1.3 2015/10/12 12:07:24 cz277 Exp $
+HParm      3.5.0      CUED   12/10/15  : $Id: HParm.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HUtil      3.5.0      CUED   12/10/15  : $Id: HUtil.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HFBLat     3.5.0      CUED   12/10/15  : $Id: HFBLat.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HExactMPE  3.5.0      CUED   12/10/15  : $Id: HExactMPE.c,v 1.1.1.1 2006/10/11 09:54:57 jal58 Exp $
+HArc       3.5.0      CUED   12/10/15  : $Id: HArc.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HDict      3.5.0      CUED   12/10/15  : $Id: HDict.c,v 1.1.1.1 2006/10/11 09:54:57 jal58 Exp $
+HLat       3.5.0      CUED   12/10/15  : $Id: HLat.c,v 1.2 2006/12/07 11:09:08 mjfg Exp $
+HNet       3.5.0      CUED   12/10/15  : $Id: HNet.c,v 1.2 2015/10/12 12:07:24 cz277 Exp $
+HAdapt     3.5.0      CUED   12/10/15  : $Id: HAdapt.c,v 1.3 2015/10/12 12:07:24 cz277 Exp $
+HNCache    3.5.0      CUED   12/10/15  : $Id: HNCache.c,v 1.0 2015/10/12 12:07:24 cz277 Exp $
+
+MKL version 11.1.2 (build 20140122)
+Intel(R) 64 architecture
+MKL thread number = 1
+
+Reading ANN models...
+ANN model structure:
+ANN "DNN1":
+	1. PERCEPTRON layer "layer2": 351 dim X 500 dim
+		Input feature mixture "layerin_feamix": 351 dim
+			Input feature stream 1: 39 (1 - 39) dim, context shift {-4 -3 -2 -1 0 1 2 3 4}
+		Weight matrix layer2_weight: 351 dim X 500 dim [UPDATABLE]
+		Bias vector layer2_bias: 500 dim [UPDATABLE]
+		Activation function "SIGMOID"
+
+	2. PERCEPTRON layer "layer3": 500 dim X 500 dim
+		Input feature mixture "layer2_feamix": 500 dim
+			ANN layer "layer2" outputs: 500 (1 - 500) dim, context shift {0}
+		Weight matrix layer3_weight: 500 dim X 500 dim [UPDATABLE]
+		Bias vector layer3_bias: 500 dim [UPDATABLE]
+		Activation function "SIGMOID"
+
+	3. PERCEPTRON layer "layer4": 500 dim X 500 dim
+		Input feature mixture "layer3_feamix": 500 dim
+			ANN layer "layer3" outputs: 500 (1 - 500) dim, context shift {0}
+		Weight matrix layer4_weight: 500 dim X 500 dim [UPDATABLE]
+		Bias vector layer4_bias: 500 dim [UPDATABLE]
+		Activation function "SIGMOID"
+
+	4. PERCEPTRON layer "layer5": 500 dim X 500 dim
+		Input feature mixture "layer4_feamix": 500 dim
+			ANN layer "layer4" outputs: 500 (1 - 500) dim, context shift {0}
+		Weight matrix layer5_weight: 500 dim X 500 dim [UPDATABLE]
+		Bias vector layer5_bias: 500 dim [UPDATABLE]
+		Activation function "SIGMOID"
+
+	5. PERCEPTRON layer "layer6": 500 dim X 500 dim
+		Input feature mixture "layer5_feamix": 500 dim
+			ANN layer "layer5" outputs: 500 (1 - 500) dim, context shift {0}
+		Weight matrix layer6_weight: 500 dim X 500 dim [UPDATABLE]
+		Bias vector layer6_bias: 500 dim [UPDATABLE]
+		Activation function "SIGMOID"
+
+	6. PERCEPTRON layer "layerout": 500 dim X 144 dim [OUTPUT]
+		Input feature mixture "layer6_feamix": 500 dim
+			ANN layer "layer6" outputs: 500 (1 - 500) dim, context shift {0}
+		Weight matrix layerout_weight: 500 dim X 144 dim [UPDATABLE]
+		Bias vector layerout_bias: 144 dim [UPDATABLE]
+		Activation function "SOFTMAX"
+
+3504 utterances (1067753 samples) in the training set
+192 utterances (57070 samples) in the validation set
+
+Epoch 1 ******************************
+	Processing training set...
+		Train Accuracy = 54.72% [584308 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.000000e-03
+		Training time cost = 162.63s
+
+	Processing validation validation set...
+		Validation Accuracy = 56.29% [32126 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 3.05s
+
+
+Epoch 2 ******************************
+	Processing training set...
+		Train Accuracy = 60.57% [646701 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.000000e-03
+		Training time cost = 161.54s
+
+	Processing validation validation set...
+		Validation Accuracy = 57.98% [33092 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 3.02s
+
+
+Epoch 3 ******************************
+	Processing training set...
+		Train Accuracy = 62.58% [668174 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.000000e-03
+		Training time cost = 162.32s
+
+	Processing validation validation set...
+		Validation Accuracy = 58.83% [33572 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.96s
+
+
+Epoch 4 ******************************
+	Processing training set...
+		Train Accuracy = 64.17% [685189 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.000000e-03
+		Training time cost = 161.34s
+
+	Processing validation validation set...
+		Validation Accuracy = 59.39% [33895 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.95s
+
+
+Epoch 5 ******************************
+	Processing training set...
+		Train Accuracy = 65.43% [698656 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.000000e-03
+		Training time cost = 160.92s
+
+	Processing validation validation set...
+		Validation Accuracy = 60.19% [34352 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.94s
+
+
+Epoch 6 ******************************
+	Processing training set...
+		Train Accuracy = 66.52% [710241 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.000000e-03
+		Training time cost = 161.51s
+
+	Processing validation validation set...
+		Validation Accuracy = 60.04% [34262 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.96s
+
+
+Epoch 7 ******************************
+	Reload HMMSet generated by epoch 5
+	Processing training set...
+		Train Accuracy = 68.01% [726190 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 1.000000e-03
+		Training time cost = 161.65s
+
+	Processing validation validation set...
+		Validation Accuracy = 61.50% [35100 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.96s
+
+
+Epoch 8 ******************************
+	Processing training set...
+		Train Accuracy = 68.78% [734388 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 1.000000e-03
+		Training time cost = 161.96s
+
+	Processing validation validation set...
+		Validation Accuracy = 61.18% [34918 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.95s
+
+
+Epoch 9 ******************************
+	Reload HMMSet generated by epoch 7
+	Processing training set...
+		Train Accuracy = 69.60% [743189 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 5.000000e-04
+		Training time cost = 161.84s
+
+	Processing validation validation set...
+		Validation Accuracy = 61.78% [35260 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.95s
+
+
+Epoch 10 ******************************
+	Processing training set...
+		Train Accuracy = 70.47% [752486 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 2.500000e-04
+		Training time cost = 161.05s
+
+	Processing validation validation set...
+		Validation Accuracy = 62.17% [35483 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 2.94s
+
+
+Epoch 11 ******************************
+	Processing training set...
+		Train Accuracy = 70.95% [757526 right out of 1067753 samples]
+		Batch count = 1335, Update count = 1335
+		Learning rate = 1.250000e-04
+		Training time cost = 162.07s
+
+	Processing validation validation set...
+		Validation Accuracy = 62.24% [35522 right out of 57070 samples]
+		Batch count = 192
+		Validation time cost = 3.01s
+
+
+Finish Training ***********************
+	12015 updates processed in total
+
+
+
