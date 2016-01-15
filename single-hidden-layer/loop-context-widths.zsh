@@ -1,29 +1,48 @@
 #!/usr/bin/zsh
+zmodload zsh/parameter
 
 features=(
-"MFC" # E_D_A_Z
 "MFC_E_Z"
 "MFC_E_D_Z"
-"FBK" # D_A_Z
+"MFC_E_D_A_Z"
+"FBK_Z"
+"FBK_D_Z"
+"FBK_D_A_Z"
 )
-alignDirs=(
-$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+mfcDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+hmmDirs=(
 $(dirname `pwd`)/"MFC_E_Z_FlatStart"
 $(dirname `pwd`)/"MFC_E_D_Z_FlatStart"
+$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+$(dirname `pwd`)/"FBK_Z_FlatStart"
+$(dirname `pwd`)/"FBK_D_Z_FlatStart"
 $(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
 )
 envDirs=(
-"../../convert/mfc13d/env/environment_E_D_A_Z"
 "../../convert/mfc13d/env/environment_E_Z"
 "../../convert/mfc13d/env/environment_E_D_Z"
+"../../convert/mfc13d/env/environment_E_D_A_Z"
+"../../convert/fbk25d/env/environment_Z"
+"../../convert/fbk25d/env/environment_D_Z"
 "../../convert/fbk25d/env/environment_D_A_Z"
 )
+featureDims=(
+13
+26
+39
+24
+48
+72
+)
+
+sleepsecs=30 # seconds to sleep between checking if decoding forks are done
 
 integer i
 for i in {1..$#features}; do
   feature=$features[i]
-  alignDir=$alignDirs[i]
+  hmmDir=$hmmDirs[i]
   envDir=$envDirs[i]
+  featureDim=$featureDims[i]
 
   contexts=(
   "0"
@@ -49,7 +68,7 @@ for i in {1..$#features}; do
 
     split=("${(@s/,/)context}") # @ modifier splits string into array
     contextLength=${#split}
-    inputLayerSize=$(($contextLength*39))
+    inputLayerSize=$(($featureDim*$contextLength))
 
     #set the context length and input layer size
     sed -i "s/set CONTEXTSHIFT=[^ ]*/set CONTEXTSHIFT=$context/" ./HTE.dnntrain
@@ -59,8 +78,8 @@ for i in {1..$#features}; do
     ../../tools/steps/step-dnntrain \
       -DNNTRAINHTE `pwd`/HTE.dnntrain -USEGPUID 0\
       $envDir \
-      $alignDir/align-mono-hmm84/align/timit_train.mlf $alignDir/mono/hmm84/MMF \
-      $alignDir/mono/hmms.mlist MH0/dnntrain
+      $mfcDir/align-mono-hmm84/align/timit_train.mlf $mfcDir/mono/hmm84/MMF \
+      $hmmDir/mono/hmms.mlist MH0/dnntrain
 
     #copy fine-tuning log for train/cv frame classification performance
     cp ./MH0/dnntrain/dnn3.finetune/LOG \
@@ -73,15 +92,21 @@ for i in {1..$#features}; do
         -INSWORD $insword \
         -SUBTRAIN \
         `pwd`/MH0/dnntrain dnn3.finetune \
-        MH0/decode-dnn3.finetune-trainSub-features=${feature}-context=${context}-insword=${insword}
+        MH0/decode-dnn3.finetune-trainSub-features=${feature}-context=${context}-insword=${insword} &
 
       print "Decoding INSWORD=${insword} on test set"
       ../../tools/steps/step-decode \
         -INSWORD $insword \
         `pwd`/MH0/dnntrain dnn3.finetune \
-        MH0/decode-dnn3.finetune-features=${feature}-context=${context}-insword=${insword}
+        MH0/decode-dnn3.finetune-features=${feature}-context=${context}-insword=${insword} &
     done
+
+    while (( ${#jobstates} )); do
+      print "Current active jobs: ${#jobstates}"
+      print "Sleeping for $sleepsecs seconds"
+      sleep ${sleepsecs}
+    done
+    print "Done all decoding jobs"
   done
 done
-
 

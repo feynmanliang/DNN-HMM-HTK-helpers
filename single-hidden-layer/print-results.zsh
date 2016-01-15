@@ -2,8 +2,10 @@
 features=(
 "MFC_E_Z"
 "MFC_E_D_Z"
-"MFC" # E_D_A_Z
-"FBK" # D_A_Z
+"MFC_E_D_A_Z"
+"FBK_Z"
+"FBK_D_Z"
+"FBK_D_A_Z"
 )
 contexts=(
 "0"
