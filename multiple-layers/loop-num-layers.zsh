@@ -1,7 +1,11 @@
 #!/usr/bin/zsh
+zmodload zsh/parameter
 
-envDir="../../convert/mfc13d/env/environment_E_D_A_Z"
-alignDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+sleepsecs=30 # seconds to sleep between checking if decoding forks are done
+
+envDir="../../convert/fbk25d/env/environment_D_A_Z"
+mfcDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+hmmDir=$(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
 
 for numHiddenLayers in {2..8}; do
   subString=507X`repeat $numHiddenLayers printf 500X`3000
@@ -9,9 +13,9 @@ for numHiddenLayers in {2..8}; do
   #set the number of layers
   sed -i "s/set DNNSTRUCTURE=[^ #]*/set DNNSTRUCTURE=$subString/" ./HTE.dnntrain
 
-  for ptwd in 0.1 0.01 0.001 0.0001 0.00001 0.000001; do
+  for ptwd in 0.1 0.01 0.001 0.0001 0.00001; do
     sed -i "s/set PTWEIGHTDECAY=[^ #]*/set PTWEIGHTDECAY=$ptwd/" ./HTE.dnntrain
-    for ftwd in 0.1 0.01 0.001 0.0001 0.00001 0.000001; do
+    for ftwd in 0.1 0.01 0.001 0.0001 0.00001; do
       sed -i "s/set FTWEIGHTDECAY=[^ #]*/set FTWEIGHTDECAY=$ftwd/" ./HTE.dnntrain
 
       #remove trained dnn dir if present
@@ -25,8 +29,8 @@ for numHiddenLayers in {2..8}; do
       ../../tools/steps/step-dnntrain \
         -DNNTRAINHTE `pwd`/HTE.dnntrain -USEGPUID 0\
         $envDir \
-        $alignDir/align-mono-hmm84/align/timit_train.mlf $alignDir/mono/hmm84/MMF \
-        $alignDir/mono/hmms.mlist MH0/dnntrain
+        $mfcDir/align-mono-hmm84/align/timit_train.mlf $mfcDir/mono/hmm84/MMF \
+        $hmmDir/mono/hmms.mlist MH0/dnntrain
 
       ##copy fine-tuning log for train/cv frame classification performance
       tmp=(./MH0/dnntrain/*.finetune/)
@@ -42,14 +46,21 @@ for numHiddenLayers in {2..8}; do
           -INSWORD $insword \
           -SUBTRAIN \
           `pwd`/MH0/dnntrain ${finetune} \
-          MH0/decode-${finetune}-trainSub-numHiddenLayers=${numHiddenLayers}-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword}
+          MH0/decode-${finetune}-trainSub-numHiddenLayers=${numHiddenLayers}-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword} &
 
         print "Decoding INSWORD=${insword} on test set"
         ../../tools/steps/step-decode \
           -INSWORD $insword \
           `pwd`/MH0/dnntrain ${finetune} \
-          MH0/decode-${finetune}-numHiddenLayers=${numHiddenLayers}-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword}
+          MH0/decode-${finetune}-numHiddenLayers=${numHiddenLayers}-ptwd=${ptwd}-ftwd=${ftwd}-insword=${insword} &
       done
+
+      while (( ${#jobstates} )); do
+        print "Current active jobs: ${#jobstates}"
+        print "Sleeping for $sleepsecs seconds"
+        sleep ${sleepsecs}
+      done
+      print "Done all decoding jobs"
     done
   done
 done
