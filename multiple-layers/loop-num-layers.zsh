@@ -3,9 +3,10 @@ zmodload zsh/parameter
 
 sleepsecs=30 # seconds to sleep between checking if decoding forks are done
 
-envDir="../../convert/fbk25d/env/environment_D_A_Z"
+envDir="../../convert/mfc13d/env/environment_E_D_A_Z"
 mfcDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
-hmmDir=$(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
+#hmmDir=$(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
+hmmDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
 
 for numHiddenLayers in {2..8}; do
   subString=507X`repeat $numHiddenLayers printf 500X`3000
