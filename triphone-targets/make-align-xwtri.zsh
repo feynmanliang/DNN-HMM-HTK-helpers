@@ -1,16 +1,18 @@
 #!/usr/bin/zsh
 
-feature=MFC_E_D_A_Z
-alignDir=$(dirname `pwd`)/${feature}_FlatStart
-envDir=../../convert/mfc13d/env/environment_E_D_A_Z
-
-print $alignDir
-
-# train xwtri from MFC_E_D_A_Z_FlatStart monophones
-../tools/steps/step-xwtri \
+# train xwtri from MFC_E_D_A_Z_FlatStart monophones, HMM for generating alignments
+../../tools/steps/step-xwtri \
   -NUMMIXES 8 -ROVAL 200 -TBVAL 800 \
-  $alignDir/mono hmm14 $alignDir/xwtri
+  $(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/mono hmm14 $(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/xwtri
 
-# align frames
-../tools/steps/step-align $alignDir/xwtri hmm84 \
-  $alignDir/align-xwtri-hmm84
+# align frames using MFC_E_D_A_Z, best performing GMM-HMM model
+../../tools/steps/step-align $(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/xwtri hmm84 \
+  $(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/align-xwtri-hmm84
+
+#rm -rf $(dirname `pwd`)/MFC_E_D_A_Z_FlatStart/xwtri
+
+# train xwtri from FBK_D_A_Z monophones, HMM hidden states for use with DNN likelihood
+#../../tools/steps/step-xwtri \
+#  -NUMMIXES 8 -ROVAL 200 -TBVAL 800 \
+#  $(dirname `pwd`)/FBK_D_A_Z_FlatStart/mono hmm14 $(dirname `pwd`)/FBK_D_A_Z_FlatStart/xwtri
+

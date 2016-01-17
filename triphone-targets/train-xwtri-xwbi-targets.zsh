@@ -2,7 +2,9 @@
 zmodload zsh/parameter
 
 envDir="../../convert/mfc13d/env/environment_E_D_A_Z"
-alignDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+mfcDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
+#hmmDir=$(dirname `pwd`)/"FBK_D_A_Z_FlatStart"
+hmmDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
 
 sleepsecs=30 # seconds to sleep between checking if decoding forks are done
 
@@ -31,13 +33,13 @@ for ptwd in 1 0.1; do
     ../../tools/steps/step-dnntrain \
       -DNNTRAINHTE `pwd`/$hteFile -USEGPUID 0 \
       $envDir \
-      $alignDir/align-xwtri-hmm84/align/timit_train.mlf $alignDir/xwtri/hmm84/MMF \
-      $alignDir/xwtri/hmms.mlist MH0/$xwtriDir &
+      $mfcDir/align-xwtri-hmm84/align/timit_train.mlf $mfcDir/xwtri/hmm84/MMF \
+      $hmmDir/xwtri/hmms.mlist MH0/$xwtriDir &
     ../../tools/steps/step-dnntrain \
       -DNNTRAINHTE `pwd`/$hteFile -USEGPUID 0 \
       $envDir \
-      $alignDir/align-xwbi-rc-hmm84/align/timit_train.mlf $alignDir/xwbi-rc/hmm84/MMF \
-      $alignDir/xwbi-rc/hmms.mlist MH0/$xwbiDir &
+      $mfcDir/align-xwbi-rc-hmm84/align/timit_train.mlf $mfcDir/xwbi-rc/hmm84/MMF \
+      $hmmDir/xwbi-rc/hmms.mlist MH0/$xwbiDir &
 
     sleep 5
   done
