@@ -43,10 +43,10 @@ for ptwd in 1 0.1; do
 
     sleep 5
   done
-done
-while (( ${#jobstates} )); do
-  print "Waiting for ${#jobstates} jobs to finish"
-  sleep ${sleepsecs}
+  while (( ${#jobstates} )); do
+    print "Waiting for ${#jobstates} jobs to finish"
+    sleep ${sleepsecs}
+  done
 done
 print "Done all training jobs"
 
