@@ -1,0 +1,9 @@
+INSWORD;Evaluation.Set;Acc
+-8.0;Train.Set;79.49
+-8.0;Test.Set;72.08
+-4.0;Train.Set;80.65
+-4.0;Test.Set;72.46
+-2.0;Train.Set;80.76
+-2.0;Test.Set;72.30
+0.0;Train.Set;80.43
+0.0;Test.Set;71.53
