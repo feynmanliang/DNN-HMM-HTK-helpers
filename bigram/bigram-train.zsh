@@ -10,7 +10,7 @@ hmmDir=$(dirname `pwd`)/"MFC_E_D_A_Z_FlatStart"
 # generate pronunciation dictionary from word list
 python gen_dict_from_word_list.py word_list.txt lattice-phones.dct
 
-# train (FBK, 6 context window, 5 layers, PTWD=1e-1, FTWD=1e-5, mono targets) DNN-HMM
+# train (MFC, 5 context window, 5 layers, PTWD=1e-1, FTWD=1e-5, mono targets) DNN-HMM
 ../../tools/steps/step-dnntrain \
   -DNNTRAINHTE `pwd`/HTE.dnntrain -USEGPUID 0 \
   $envDir \

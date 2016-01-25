@@ -1,0 +1,1273 @@
+Decoding INS=-16.0, SF=0.0 on train
+Decoding INS=-16.0, SF=0.0 on test
+Decoding INS=-16.0, SF=1.0 on train
+Decoding INS=-16.0, SF=1.0 on test
+Decoding INS=-16.0, SF=2.0 on train
+Decoding INS=-16.0, SF=2.0 on test
+Decoding INS=-16.0, SF=4.0 on train
+Decoding INS=-16.0, SF=4.0 on test
+Decoding INS=-8.0, SF=0.0 on train
+Decoding INS=-8.0, SF=0.0 on test
+Decoding INS=-8.0, SF=1.0 on train
+Decoding INS=-8.0, SF=1.0 on test
+Decoding INS=-8.0, SF=2.0 on train
+Decoding INS=-8.0, SF=2.0 on test
+Decoding INS=-8.0, SF=4.0 on train
+Decoding INS=-8.0, SF=4.0 on test
+Decoding INS=-4.0, SF=0.0 on train
+Decoding INS=-4.0, SF=0.0 on test
+Decoding INS=-4.0, SF=1.0 on train
+Decoding INS=-4.0, SF=1.0 on test
+Decoding INS=-4.0, SF=2.0 on train
+Decoding INS=-4.0, SF=2.0 on test
+Decoding INS=-4.0, SF=4.0 on train
+Decoding INS=-4.0, SF=4.0 on test
+Decoding INS=-2.0, SF=0.0 on train
+Decoding INS=-2.0, SF=0.0 on test
+Decoding INS=-2.0, SF=1.0 on train
+Decoding INS=-2.0, SF=1.0 on test
+Decoding INS=-2.0, SF=2.0 on train
+Decoding INS=-2.0, SF=2.0 on test
+Decoding INS=-2.0, SF=4.0 on train
+Decoding INS=-2.0, SF=4.0 on test
+Decoding INS=0.0, SF=0.0 on train
+Decoding INS=0.0, SF=0.0 on test
+Decoding INS=0.0, SF=1.0 on train
+Decoding INS=0.0, SF=1.0 on test
+Decoding INS=0.0, SF=2.0 on train
+Decoding INS=0.0, SF=2.0 on test
+Decoding INS=0.0, SF=4.0 on train
+Decoding INS=0.0, SF=4.0 on test
+Decoding INS=-16.0, SF=0.0 on train
+Decoding INS=-16.0, SF=0.0 on test
+Decoding INS=-16.0, SF=1.0 on train
+Decoding INS=-16.0, SF=1.0 on test
+Decoding INS=-16.0, SF=2.0 on train
+Decoding INS=-16.0, SF=2.0 on test
+Decoding INS=-16.0, SF=4.0 on train
+Decoding INS=-16.0, SF=4.0 on test
+Decoding INS=-8.0, SF=0.0 on train
+Decoding INS=-8.0, SF=0.0 on test
+Decoding INS=-8.0, SF=1.0 on train
+Decoding INS=-8.0, SF=1.0 on test
+Decoding INS=-8.0, SF=2.0 on train
+Decoding INS=-8.0, SF=2.0 on test
+Decoding INS=-8.0, SF=4.0 on train
+Decoding INS=-8.0, SF=4.0 on test
+Decoding INS=-4.0, SF=0.0 on train
+Decoding INS=-4.0, SF=0.0 on test
+Decoding INS=-4.0, SF=1.0 on train
+Decoding INS=-4.0, SF=1.0 on test
+Decoding INS=-4.0, SF=2.0 on train
+Decoding INS=-4.0, SF=2.0 on test
+Decoding INS=-4.0, SF=4.0 on train
+Decoding INS=-4.0, SF=4.0 on test
+Decoding INS=-2.0, SF=0.0 on train
+Decoding INS=-2.0, SF=0.0 on test
+Decoding INS=-2.0, SF=1.0 on train
+Decoding INS=-2.0, SF=1.0 on test
+Decoding INS=-2.0, SF=2.0 on train
+Decoding INS=-2.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on test
+Decoding INS=0.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=0.0, SF=0.0 on test
+Decoding INS=0.0, SF=1.0 on train
+Decoding INS=0.0, SF=1.0 on test
+Decoding INS=0.0, SF=2.0 on train
+Decoding INS=0.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on test
+Decoding INS=-16.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-16.0, SF=0.0 on test
+Decoding INS=-16.0, SF=1.0 on train
+Monophone system decoding
+Decoding INS=-16.0, SF=1.0 on test
+Monophone system decoding
+Decoding INS=-16.0, SF=2.0 on train
+Decoding INS=-16.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-16.0, SF=4.0 on train
+Decoding INS=-16.0, SF=4.0 on test
+Decoding INS=-8.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-8.0, SF=0.0 on test
+Monophone system decoding
+Decoding INS=-8.0, SF=1.0 on train
+Decoding INS=-8.0, SF=1.0 on test
+Monophone system decoding
+Decoding INS=-8.0, SF=2.0 on train
+Decoding INS=-8.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-8.0, SF=4.0 on train
+Decoding INS=-8.0, SF=4.0 on test
+Decoding INS=-4.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-4.0, SF=0.0 on test
+Decoding INS=-4.0, SF=1.0 on train
+Decoding INS=-4.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=2.0 on train
+Decoding INS=-4.0, SF=2.0 on test
+Decoding INS=-4.0, SF=4.0 on train
+Decoding INS=-4.0, SF=4.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=0.0 on test
+Decoding INS=-2.0, SF=1.0 on train
+Decoding INS=-2.0, SF=1.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=2.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=2.0 on test
+Decoding INS=-2.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on test
+Decoding INS=0.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=0.0, SF=0.0 on test
+Monophone system decoding
+Decoding INS=0.0, SF=1.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=1.0 on test
+Monophone system decoding
+Decoding INS=0.0, SF=2.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=2.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on test
+Decoding INS=-16.0, SF=0.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-16.0, SF=0.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-16.0, SF=1.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-16.0, SF=1.0 on test
+Monophone system decoding
+Decoding INS=-16.0, SF=2.0 on train
+Decoding INS=-16.0, SF=2.0 on test
+Decoding INS=-16.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-16.0, SF=4.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-8.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-8.0, SF=0.0 on test
+Monophone system decoding
+Decoding INS=-8.0, SF=1.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-8.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-8.0, SF=2.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-8.0, SF=2.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-8.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-8.0, SF=4.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=0.0 on train
+Decoding INS=-4.0, SF=0.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=1.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=2.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=2.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=4.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=4.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-2.0, SF=0.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-2.0, SF=0.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-2.0, SF=1.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-2.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-2.0, SF=2.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=0.0 on train
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=0.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=1.0 on train
+Monophone system decoding
+Decoding INS=0.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=2.0 on train
+Monophone system decoding
+Decoding INS=0.0, SF=2.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on test
+Monophone system decoding
+Decoding INS=-16.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-16.0, SF=0.0 on test
+Decoding INS=-16.0, SF=1.0 on train
+Monophone system decoding
+Decoding INS=-16.0, SF=1.0 on test
+Decoding INS=-16.0, SF=2.0 on train
+Decoding INS=-16.0, SF=2.0 on test
+Decoding INS=-16.0, SF=4.0 on train
+Decoding INS=-16.0, SF=4.0 on test
+Decoding INS=-8.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-8.0, SF=0.0 on test
+Decoding INS=-8.0, SF=1.0 on train
+Monophone system decoding
+Decoding INS=-8.0, SF=1.0 on test
+Decoding INS=-8.0, SF=2.0 on train
+Decoding INS=-8.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-8.0, SF=4.0 on train
+Decoding INS=-8.0, SF=4.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=0.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=0.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=1.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Decoding INS=-4.0, SF=2.0 on train
+Monophone system decoding
+Decoding INS=-4.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-4.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-4.0, SF=4.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=0.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=1.0 on train
+Decoding INS=-2.0, SF=1.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=2.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on train
+Monophone system decoding
+Decoding INS=-2.0, SF=4.0 on test
+Monophone system decoding
+Decoding INS=0.0, SF=0.0 on train
+Monophone system decoding
+Decoding INS=0.0, SF=0.0 on test
+Monophone system decoding
+Decoding INS=0.0, SF=1.0 on train
+Decoding INS=0.0, SF=1.0 on test
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=2.0 on train
+Monophone system decoding
+Monophone system decoding
+Decoding INS=0.0, SF=2.0 on test
+Monophone system decoding
+Decoding INS=0.0, SF=4.0 on train
+Decoding INS=0.0, SF=4.0 on test
+Monophone system decoding
+Monophone system decoding
+Current active jobs: 200
+Sleeping for 30 seconds
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Monophone system decoding
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 200
+Sleeping for 30 seconds
+Current active jobs: 199
+Sleeping for 30 seconds
+Current active jobs: 198
+Sleeping for 30 seconds
+Current active jobs: 198
+Sleeping for 30 seconds
+Current active jobs: 197
+Sleeping for 30 seconds
+Current active jobs: 196
+Sleeping for 30 seconds
+Current active jobs: 195
+Sleeping for 30 seconds
+Current active jobs: 193
+Sleeping for 30 seconds
+Current active jobs: 191
+Sleeping for 30 seconds
+Current active jobs: 189
+Sleeping for 30 seconds
+Current active jobs: 186
+Sleeping for 30 seconds
+Current active jobs: 184
+Sleeping for 30 seconds
+Current active jobs: 178
+Sleeping for 30 seconds
+Current active jobs: 174
+Sleeping for 30 seconds
+Current active jobs: 168
+Sleeping for 30 seconds
+Current active jobs: 164
+Sleeping for 30 seconds
+Current active jobs: 157
+Sleeping for 30 seconds
+Current active jobs: 147
+Sleeping for 30 seconds
+Current active jobs: 136
+Sleeping for 30 seconds
+Current active jobs: 131
+Sleeping for 30 seconds
+Current active jobs: 121
+Sleeping for 30 seconds
+Current active jobs: 116
+Sleeping for 30 seconds
+Current active jobs: 112
+Sleeping for 30 seconds
+Current active jobs: 107
+Sleeping for 30 seconds
+Current active jobs: 105
+Sleeping for 30 seconds
+Current active jobs: 103
+Sleeping for 30 seconds
+Current active jobs: 101
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 100
+Sleeping for 30 seconds
+Current active jobs: 99
+Sleeping for 30 seconds
+Current active jobs: 99
+Sleeping for 30 seconds
+Current active jobs: 99
+Sleeping for 30 seconds
+Current active jobs: 98
+Sleeping for 30 seconds
+Current active jobs: 98
+Sleeping for 30 seconds
+Current active jobs: 97
+Sleeping for 30 seconds
+Current active jobs: 95
+Sleeping for 30 seconds
+Current active jobs: 93
+Sleeping for 30 seconds
+Current active jobs: 93
+Sleeping for 30 seconds
+Current active jobs: 92
+Sleeping for 30 seconds
+Current active jobs: 91
+Sleeping for 30 seconds
+Current active jobs: 89
+Sleeping for 30 seconds
+Current active jobs: 87
+Sleeping for 30 seconds
+Current active jobs: 85
+Sleeping for 30 seconds
+Current active jobs: 85
+Sleeping for 30 seconds
+Current active jobs: 79
+Sleeping for 30 seconds
+Current active jobs: 78
+Sleeping for 30 seconds
+Current active jobs: 68
+Sleeping for 30 seconds
+Current active jobs: 62
+Sleeping for 30 seconds
+Current active jobs: 55
+Sleeping for 30 seconds
+Current active jobs: 48
+Sleeping for 30 seconds
+Current active jobs: 41
+Sleeping for 30 seconds
+Current active jobs: 33
+Sleeping for 30 seconds
+Current active jobs: 27
+Sleeping for 30 seconds
+Current active jobs: 14
+Sleeping for 30 seconds
+Done all decoding jobs

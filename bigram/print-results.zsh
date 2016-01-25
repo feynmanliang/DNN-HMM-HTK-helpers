@@ -15,8 +15,8 @@ cvAcc=$(cat \
 print $trainAcc\;$cvAcc
 
 # decode accuracies
-for ins in -32.0 -16.0 -8.0 -4.0 -2.0 0.0; do
-  for sf in 1.0 2.0 4.0 8.0 16.0 32.0 64.0; do
+for ins in -32.0 -16.0 -8.0 -4.0 -2.0 0.0 2.0 4.0 8.0; do
+  for sf in 0.0 1.0 2.0 4.0 8.0 16.0 32.0 64.0; do
     decodeAcc=$(cat \
       MH0/decode-dnn*.finetune-trainSub-ins-${ins}-sf-${sf}/test/LOG \
       | tail -n5 \
